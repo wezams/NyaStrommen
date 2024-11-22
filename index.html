@@ -9,10 +9,6 @@
         content="Upptäck Den Nya Strömmen, en innovativ approach till surströmming med unika smaker som Coca Cola och Cotton Candy, skapade genom avancerad CRISPR-teknologi. Hållbar, hälsosam och framtidens surströmming.">
     <link rel="stylesheet" href="css.css">
     <script>
-        Notification.requestPermission();
-        window.addEventListener('beforeunload', function (e) {
-            e.preventDefault();
-        });
 
         window.onload = function () {
             const candy = document.getElementById("cottonCandy");
@@ -81,6 +77,8 @@
             })
         };
 
+       
+
         // Lock scrolling on the main page
         function lockBodyScroll() {
             document.body.style.overflow = 'hidden';
@@ -118,6 +116,7 @@
         function openDialog() {
     const dialog = document.getElementById("myDialog"); // Reference dialog element
     const timerElement = document.getElementById("timer"); // Reference timer element
+    document.body.style.overflow = 'hidden';
     
     dialog.showModal(); // Open dialog
     startCountdown(5 * 60, timerElement); // Start countdown
@@ -155,9 +154,16 @@ function startCountdown(seconds, timerElement) {
 
 <body>
 
+    <nav></nav>
+
+    <div class="container">
+    <button id="svenska" class="språk">Svenska</button>
+    <button id="engelska" class="språk">Engelska</button>
+    </div>
+
     <main>
-        <header>Den nya strömmen</header>
-        <p class="summary">
+        <header id="NyaStrömmen">Den nya strömmen</header>
+        <p class="summary" id="textRuta">
             På Den Nya Strömmen revolutionerar vi surströmming med vår unika, patent-skyddade Flavour Fish-teknik. Genom
             att
             använda CRISPR-teknologi kan vi föda upp strömming med helt nya, spännande smaker som Coca Cola och Cotton
@@ -174,7 +180,7 @@ function startCountdown(seconds, timerElement) {
 
     <div id="Text-devider"></div>
 
-    <h1>Välj mellan 12 olika smaker!</h1>
+    <h1 id="smaker">Välj mellan 12 olika smaker!</h1>
 
  
         <div class="wrapper">
@@ -344,9 +350,12 @@ function startCountdown(seconds, timerElement) {
                 comment3.textContent = comment2.textContent;
                 comment2.textContent = comment1.textContent;
                 comment1.textContent = inputText;
+
+                picture1.style.backgroundImage = "url(imges/brittish-lad)"
+
                 picture3.style.backgroundImage = picture2.style.backgroundImage;
                 picture2.style.backgroundImage = picture1.style.backgroundImage;
-                picture1.style.backgroundImage = "url('imges/brittish-lad')";
+                picture1.style.backgroundImage = "url('imges/no-user.jpg')";
 
                 userInput.value = '';
 
@@ -363,6 +372,35 @@ function startCountdown(seconds, timerElement) {
             }
         });
     });
+
+    const svenska = document.getElementById("svenska");
+const engelska = document.getElementById("engelska");
+
+svenska.addEventListener("click", () => {
+    ändraSpråk(
+        "Den nya strömmen", 
+        "På Den Nya Strömmen revolutionerar vi surströmming med vår unika, patent-skyddade Flavour Fish-teknik. Genom att använda CRISPR-teknologi kan vi föda upp strömming med helt nya, spännande smaker som Coca Cola och Cotton Candy. Vår fisk kommer från kontrollerade, rena miljöer, vilket gör den både hälsosammare och mer hållbar än traditionell surströmming som fångas i den förorenade Östersjön. Vi strävar efter att förändra marknaden för surströmming genom att erbjuda en ny och innovativ upplevelse som kombinerar tradition med modern teknik. <br> <span> Bli del av Den Nya Strömmen, IDAG!</span>", 
+        "Välj mellan 12 olika smaker!",
+    );
+});
+
+engelska.addEventListener("click", () => {
+    ändraSpråk(
+        "The new stream", 
+        "At The New Stream, we revolutionize fermented herring with our unique, patent-protected Flavour Fish technology. Using CRISPR technology, we can breed herring with entirely new, exciting flavors like Coca Cola and Cotton Candy. Our fish come from controlled, clean environments, making them both healthier and more sustainable than traditional fermented herring caught in the polluted Baltic Sea. We aim to transform the market for fermented herring by offering a new and innovative experience that blends tradition with modern technology. <br> <span> Join The New Stream, TODAY!</span>", 
+        "Choose between 12 different flavors!",
+    );
+});
+
+function ändraSpråk(header, p, h1) {
+    const titel = document.getElementById("NyaStrömmen");
+    const text = document.getElementById("textRuta");
+    const smaker = document.getElementById("smaker");
+
+    if (titel) titel.innerHTML = header;
+    if (text) text.innerHTML = p;
+    if (smaker) smaker.innerHTML = h1;
+}
 </script>
 </body>
 
