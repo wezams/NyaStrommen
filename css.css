@@ -4,11 +4,8 @@
 
 body {
 
-    height: 100vh;
     margin: 0px;
-    background-image: url('imges/sky.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #ffffff, #00f7ff);
 
 }
 
@@ -270,11 +267,11 @@ h1 {
 
 footer {
 
-    background-color: gray;
+    background-color: rgba(83, 82, 82, 0.87);
     font-size: 100vw;
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2.3vw;
     margin-top: 5%;
 
 }
@@ -366,29 +363,53 @@ footer {
 
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background: linear-gradient(to bottom, #4CAF50, #388E3C);
     color: white;
     border: none;
-    cursor: pointer;
+    border-radius: 0px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 100);
 
 }
 
 #buy-button:hover {
 
-    background-color: #45a049;
+    background: linear-gradient(to bottom, #54c258, #42a847);
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+#buy-button:active{
+
+    background: linear-gradient(to bottom, #3d8f41, #2b6e2e);
+    cursor: crosshair;
+    transform: scale(0.95);
+
+}
+
+#nowrap{
+
+    display: flex;
+    flex-wrap: nowrap;
 
 }
 
 #user-input {
-    width: 90%;
+
+    width: 100%;
     margin-top: 10px;
     padding: 8px;
     font-size: 14px;
+    height: 27px;
+    margin-right: 10px;
+
 }
 
-#publish-button {
+#publish-button{
 
-    width: 6%;
+    height: 27px;
 
 }
 
@@ -464,6 +485,20 @@ dialog {
     font-weight: bold;
     margin-top: 10px;
   }
+
+    /* Makes links green */
+
+  a:link{
+
+    color: #5cd160;
+
+}
+
+a:visited{
+
+    color: #5cd160;
+
+}
 
 /* Turns anything invisable */
 
