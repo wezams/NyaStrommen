@@ -4,7 +4,7 @@ document.getElementById('commentForm').addEventListener('submit', async (e) => {
     const commentText = document.getElementById('user-input').value;
   
     // GitHub API details
-    const token = '';
+    const token = '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';
     const repo = 'wezams/NyaStrommen';
     const filePath = 'comments.json';
   
