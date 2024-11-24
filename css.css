@@ -9,24 +9,6 @@ body {
 
 }
 
-nav{
-
-    height: 100vh;
-    width: 1%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #000000;
-    transition: 1000ms;
-
-}
-
-nav:hover{
-
-    width: 10%;
-
-}
-
 .container {
 
     display: flex;

@@ -155,8 +155,6 @@ function startCountdown(seconds, timerElement) {
 
 <body>
 
-    <nav></nav>
-
     <div class="container">
     <button id="svenska" class="språk">Svenska</button>
     <button id="engelska" class="språk">Engelska</button>
@@ -316,10 +314,8 @@ function startCountdown(seconds, timerElement) {
             <div class="longboi"></div>
 
             <div id="nowrap">
-                <form id="commentForm">
                     <input type="text" id="user-input" placeholder="Write a comment...">
-                    <button id="publish-button" type="submit">Publish</button>
-                </form>
+                    <button id="publish-button" type="button">Publish</button>
 
             </div>
     
@@ -351,6 +347,7 @@ function startCountdown(seconds, timerElement) {
 <script>
 
     document.addEventListener('DOMContentLoaded', function () {
+        let imgcount = 0;
         const userInput = document.getElementById('user-input');
         const publishButton = document.getElementById('publish-button');
         const commentCount = document.getElementById('comment-count');
@@ -376,6 +373,27 @@ function startCountdown(seconds, timerElement) {
                 const picture2 = document.getElementById('profile2');
                 const picture3 = document.getElementById('profile3');
 
+                imgcount += 1;
+
+                if (imgcount == 1){
+
+                    picture1.style.backgroundImage = "url('imges/no-user.jpg')";
+                    picture2.style.backgroundImage = "url('imges/brittish-lad')"
+
+                }
+
+                if (imgcount == 2){
+
+                    picture2.style.backgroundImage = "url('imges/no-user.jpg')";
+                    picture3.style.backgroundImage = "url('imges/brittish-lad')"
+                    
+                }
+                
+                if (imgcount == 3){
+
+                    picture3.style.backgroundImage = "url('imges/no-user.jpg')";
+
+                }
 
                 name3.textContent = name2.textContent;
                 name2.textContent = name1.textContent;
@@ -383,12 +401,6 @@ function startCountdown(seconds, timerElement) {
                 comment3.textContent = comment2.textContent;
                 comment2.textContent = comment1.textContent;
                 comment1.textContent = inputText;
-
-                picture1.style.backgroundImage = "url(imges/brittish-lad)"
-
-                picture3.style.backgroundImage = picture2.style.backgroundImage;
-                picture2.style.backgroundImage = picture1.style.backgroundImage;
-                picture1.style.backgroundImage = "url('imges/no-user.jpg')";
 
                 userInput.value = '';
 
