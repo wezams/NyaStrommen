@@ -540,8 +540,7 @@ a:visited{
 
     #textRuta{
 
-        height: 0;
-        width: 0;
+        display: none;
 
     }
 
