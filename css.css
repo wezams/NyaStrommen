@@ -17,18 +17,19 @@ body {
 }
 
 .språk {
-
     margin: 6px;
     background-color: whitesmoke;
     box-shadow: 0.2vw 0.2vw 1vw black;
     padding: 10px;
-    width: fit-content; 
-    align-self: center; 
+    width: fit-content;
+    align-self: center;
     font-weight: bold;
     transition: background-color 0.2s, box-shadow 0.2s;
-    cursor: pointer; 
-
+    cursor: pointer;
+    text-decoration: none; /* Removes underline */
+    outline: 2px solid black; /* Adds a black outline */
 }
+
 
 .språk:hover {
 
@@ -532,13 +533,13 @@ dialog::backdrop {
 
 a:link{
 
-    color: #5cd160;
+    color: #000000;
 
 }
 
 a:visited{
 
-    color: #5cd160;
+    color: #000000;
 
 }
 
