@@ -22,57 +22,57 @@
         window.onload = function () {
             const candy = document.getElementById("cottonCandy");
             candy.addEventListener("click", () => {
-                openPopup("Cotton Candy smak", "This is a test", "imges/Cotton-Candy.jpg", "imges/Sill~Herring.png");
+                openPopup("Cotton Candy smak", "En söt och lekfull smak där sockervaddens mjukhet möter vår klassiska surströmming.", "imges/Cotton-Candy.jpg", "imges/Sill~Herring.png");
             });
 
             const cola = document.getElementById("cocaCola");
             cola.addEventListener("click", () => {
-                openPopup("Coca Cola smak", "Coca Cola är gott och smakar jul", "imges/Coca-Cola.jpg", "imges/Sill~Herring.png");
+                openPopup("Coca Cola smak", "Den ikoniska dryckens karamelliga toner lyfter surströmmingen till en helt ny nivå.", "imges/Coca-Cola.jpg", "imges/Sill~Herring.png");
             });
 
             const klor = document.getElementById("Klor");
             klor.addEventListener("click", () => {
-                openPopup("Klor smak", "WOW", "imges/Klor~Chlorine.jpg", "imges/Sill~Herring.png");
+                openPopup("Klor smak", "En distinkt och skarp smakprofil som ger en frisk känsla och ett ovanligt djup till vår klassiska surströmming.", "imges/Klor~Chlorine.jpg", "imges/Sill~Herring.png");
             });
 
             const Surtapple = document.getElementById("Surt-äpple");
             Surtapple.addEventListener("click", () => {
-                openPopup("Surt äpple smak", "WOW", "imges/Sura-Äpplen~Sour_Apples", "imges/Sill~Herring.png");
+                openPopup("Surt äpple smak", "En frisk och syrlig twist som balanserar perfekt med den fermenterade strömmingens karaktär.", "imges/Sura-Äpplen~Sour_Apples", "imges/Sill~Herring.png");
             });
 
             const Chocklad = document.getElementById("Chocklad");
             Chocklad.addEventListener("click", () => {
-                openPopup("Chocklad smak", "WOW", "imges/Choklad~Chocolate.jpg", "imges/Sill~Herring.png");
+                openPopup("Chocklad smak", "Rik kakao möter den salta intensiteten i en överraskande kombination av smaker.", "imges/Choklad~Chocolate.jpg", "imges/Sill~Herring.png");
             });
 
             const Pepparkaka = document.getElementById("Pepparkaka");
             Pepparkaka.addEventListener("click", () => {
-                openPopup("Pepparkaka smak", "WOW", "imges/Pepparkaka~Gingerbread.jpg", "imges/Sill~Herring.png");
+                openPopup("Pepparkaka smak", "Kryddig värme från pepparkakor ger vår surströmming en oväntat julig touch.", "imges/Pepparkaka~Gingerbread.jpg", "imges/Sill~Herring.png");
             });
 
             const Rootbeer = document.getElementById("Root-beer");
             Rootbeer.addEventListener("click", () => {
-                openPopup("Root beer smak", "WOW", "imges/Root_Beer.jpg", "imges/Sill~Herring.png");
+                openPopup("Root beer smak", "De kryddiga och örtiga tonerna av root beer skapar en smak som verkligen sticker ut.", "imges/Root_Beer.jpg", "imges/Sill~Herring.png");
             });
 
             const Abborre = document.getElementById("Abborre");
             Abborre.addEventListener("click", () => {
-                openPopup("Abborre smak", "WOW", "imges/underwater.webp", "imges/Perch.png");
+                openPopup("Abborre smak", "En hyllning till våra svenska vatten, där smaken av abborre möter fermenteringens styrka.", "imges/underwater.webp", "imges/Perch.png");
             });
 
             const Salt = document.getElementById("Salt");
             Salt.addEventListener("click", () => {
-                openPopup("Salt smak", "WOW", "imges/Salt.jpg", "imges/Sill~Herring.png");
+                openPopup("Salt smak", "En ren och klassisk variant där sälta står i fokus för en tydlig smakprofil.", "imges/Salt.jpg", "imges/Sill~Herring.png");
             });
 
             const Bark = document.getElementById("Bark");
             Bark.addEventListener("click", () => {
-                openPopup("Bark smak", "WOW", "imges/Träd-Bark~Tree-Bark.jpg", "imges/Sill~Herring.png");
+                openPopup("Bark smak", "En jordig och robust smak, inspirerad av naturens enkelhet och kraft.", "imges/Träd-Bark~Tree-Bark.jpg", "imges/Sill~Herring.png");
             });
 
             const Guano = document.getElementById("Guano");
             Guano.addEventListener("click", () => {
-                openPopup("Guano smak", "WOW", "imges/Guano.jpg", "imges/Sill~Herring.png");
+                openPopup("Guano smak", "En vågad och ovanlig smak för de mest äventyrslystna – fermentering med en jordnära twist.", "imges/Guano.jpg", "imges/Sill~Herring.png");
             });
 
             const Meth = document.getElementById("Metamfetamin");
@@ -84,10 +84,6 @@
             popupClose.addEventListener("click", () => {
                 closePopup();
             })
-
-            document.getElementById('buy-button').addEventListener('click', function () {
-                alert("Buyed... 💰");
-            });
         };
 
 
@@ -159,6 +155,8 @@
 </head>
 
 <body>
+
+    <div id="test">Buyed!</div>
 
     <div class="container">
         <button id="svenska" class="språk">Svenska</button>
@@ -304,7 +302,7 @@
         <div class="holder" class="right">
             <div class="Flavour" id="Klor"><img src="imges/Klor~Chlorine.jpg" width="0%" height="0%"
                     title="This is Surströmming with the flavour of Chlorine" alt="Klor smak"
-                    referrerpolicy="no-referrer"></div>
+                    referrerpolicy="no-referrer">Klor</div>
         </div>
         <div class="Flavour-divider-holder" id="zero-width">
             <div class="Flavour-divider"></div>
@@ -477,6 +475,20 @@
             if (text) text.innerHTML = p;
             if (smaker) smaker.innerHTML = h1;
         }
+        const box = document.querySelector('#test');
+        const button = document.querySelector('#buy-button');
+
+        button.addEventListener('click', async () => {
+            box.style.visibility = "visible";
+            // Remove the animation class if it exists to restart the animation
+            box.classList.remove('animate');
+            void box.offsetWidth; // Trigger reflow to restart the animation
+            box.classList.add('animate');
+
+            setTimeout(function () {
+                box.style.visibility = "hidden";
+            }, 4000);
+        });
     </script>
 </body>
 
