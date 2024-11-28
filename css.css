@@ -377,7 +377,7 @@ footer {
 #buy-button:active{
 
     background: linear-gradient(to bottom, #3d8f41, #2b6e2e);
-    cursor: none;
+    cursor: pointer;
     transform: scale(0.95);
 
 }
