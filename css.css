@@ -443,6 +443,18 @@ footer {
 
 }
 
+#profile2{
+
+    background-image: url('imges/daniel-andersson.jpg');
+
+}
+
+#profile3{
+
+    background-image: url('imges/crazy-woman');
+
+}
+
 .comment {
 
     display: flex;
