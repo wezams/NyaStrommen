@@ -518,13 +518,13 @@ dialog::backdrop {
 }
 
 .animate {
-    animation: upGrowDown 4s ease-in-out;
+    animation: upGrowDown 3s ease-in-out;
 }
 
 @keyframes upGrowDown {
     0% {
-        transform: translate(-50%, -50%) translateY(100vh) scale(1); /* Keep centered */
-        animation-timing-function: ease-in;
+        transform: translate(-50%, -50%) translateY(100vh) scale(1);
+        animation-timing-function: ease-out;
     }
     35% {
         transform: translate(-50%, -50%) translateY(0) scale(1);
@@ -534,7 +534,7 @@ dialog::backdrop {
         transform: translate(-50%, -50%) translateY(0) scale(1.5);
         animation-timing-function: ease-out;
     }
-    65% {
+    60% {
         transform: translate(-50%, -50%) translateY(0) scale(1);
     }
     100% {
