@@ -497,22 +497,21 @@ dialog::backdrop {
 
   }
 
-#test{
-
+  #test {
     position: fixed;
     top: 50vh;
     left: 50vw;
     width: 200px;
     height: 80px;
     border-radius: 10px;
-    background: green;
+    background: rgb(56, 165, 56);
     transform: translate(-50%, -50%);
     z-index: 100000000000;
     text-align: center;
     font-weight: bolder;
     font-size: 60px;
     visibility: hidden;
-    color: #ccc;
+    color: #c9cf0c;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 100);
 }
 
@@ -522,25 +521,26 @@ dialog::backdrop {
 
 @keyframes upGrowDown {
     0% {
-        transform: translateY(100vh) scale(1); 
-        animation-timing-function: ease-in; 
+        transform: translate(-50%, -50%) translateY(100vh) scale(1); /* Keep centered */
+        animation-timing-function: ease-in;
     }
     35% {
-        transform: translateY(0) scale(1); 
-        animation-timing-function: ease-out; 
+        transform: translate(-50%, -50%) translateY(0) scale(1);
+        animation-timing-function: ease-out;
     }
-                50% {
-        transform: translateY(0) scale(1.5); 
-        animation-timing-function: ease-out; 
+    50% {
+        transform: translate(-50%, -50%) translateY(0) scale(1.5);
+        animation-timing-function: ease-out;
     }
     65% {
-        transform: translateY(0) scale(1); 
+        transform: translate(-50%, -50%) translateY(0) scale(1);
     }
     100% {
-        transform: translateY(100vh) scale(1); 
-        animation-timing-function: ease-in; 
+        transform: translate(-50%, -50%) translateY(100vh) scale(1);
+        animation-timing-function: ease-in;
     }
 }
+
     /* Makes links green */
 
 a:link{
@@ -613,6 +613,15 @@ a:visited{
     footer{
 
         font-size: 20px;
+
+    }
+
+    #test{
+
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 30px;
 
     }
 
