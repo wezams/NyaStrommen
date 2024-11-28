@@ -498,6 +498,7 @@ dialog::backdrop {
   }
 
   #test {
+
     position: fixed;
     top: 50vh;
     left: 50vw;
@@ -513,6 +514,7 @@ dialog::backdrop {
     visibility: hidden;
     color: #c9cf0c;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 100);
+    text-shadow: 2px 2px #000000;
 }
 
 .animate {
